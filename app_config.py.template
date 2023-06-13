@@ -1,0 +1,17 @@
+# Translator
+KEY = "<Translator Key>"
+COGNITIVE_ENDPOINT = "https://api.cognitive.microsofttranslator.com"
+LOCATION = "francecentral"
+
+# Graph and ID
+CLIENT_ID = "<CLIENT_ID>"  # Application (client) ID of app registration
+
+CLIENT_SECRET = "<CLIENT_SECRET>"
+
+AUTHORITY = "https://login.microsoftonline.com/<FILL_ME>"
+
+REDIRECT_PATH = "/getAToken"  # Used for forming an absolute URL to your redirect URI.
+
+ENDPOINT = 'https://graph.microsoft.com/v1.0/users'  # This resource requires no admin consent
+SCOPE = ["User.ReadBasic.All"]
+SESSION_TYPE = "filesystem"  # Specifies the token cache should be stored in server-side session
