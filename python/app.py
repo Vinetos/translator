@@ -7,9 +7,12 @@ import app_config
 from flask_session import Session
 
 app = Flask(__name__)
+
+from werkzeug.middleware.proxy_fix import ProxyFix
+
+app.wsgi_app = ProxyFix(app.wsgi_app)
 app.config.from_object(app_config)
 Session(app)
-
 
 @app.route('/', methods=['GET'])
 def index():
