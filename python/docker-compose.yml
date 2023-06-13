@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  apache-oidc:
+    build: ./apache-oidc
+    depends_on:
+      - "python-app"
+    networks:
+      - public-network
+      - private-network
+    ports:
+      - "80:80"
+      - "443:443"
+
+  python-app:
+    build: ./python
+    networks:
+      - private-network
+
+
+networks:
+  public-network:
+  private-network:
